@@ -1,4 +1,7 @@
+
+
 document.addEventListener('mouseover', parallax);
+
 function parallax(e){
     this.querySelectorAll('.img').forEach(img => {
         const speed = img.getAttribute('data-speed')
@@ -9,4 +12,6 @@ function parallax(e){
         img.style.transform = `translateX(${x}px) translateY(${y}px)`
     });
 }
+
+
 

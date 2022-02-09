@@ -1,4 +1,6 @@
 const cursor = document.querySelector('.cursor');
+const cursor2 = document.querySelector('.cursor2');
+
 const isLinkHoveredClass = 'is-link-hovered';
 const hasCustomCursorClass = 'has-custom-cursor';
 const isHiddenClass = 'is-hidden';
@@ -18,15 +20,17 @@ const onmouseleave = ()=>{
 }
 
 document.addEventListener('mousemove' ,(e) =>{
-    cursor.style.left = e.pageX + 'px';
+    cursor.style.left = e.pageX  + 'px';
     cursor.style.top = e.pageY + 'px';
+    cursor2.style.left = e.pageX  + 'px';
+    cursor2.style.top = e.pageY + 'px';
 })
 
 
 function isTouchDevice(){
     return(('ontouchstart' in window)||
-          (navigator.maxTouchPoints>0)||
-          (navigator.maxTouchPoints>0)
+          (navigator.maxTouchPoints> 0)||
+          (navigator.maxTouchPoints> 0)
     );
 }
 
